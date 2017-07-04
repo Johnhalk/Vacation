@@ -27,4 +27,13 @@ def trip_cost(city, days, spending_money):
     cost_of_trip = rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money
     return cost_of_trip
 
-print trip_cost("Los Angeles", 5, 600)
+def your_trip():
+    city = raw_input("Which city are you going to?")
+    days = raw_input("How many days are you going for?")
+    spending_money = raw_input("How much are you spending?")
+
+    print "So You are going to %s for %d days and have %d spending money?" % (city, days, spending_money)
+    return trip_cost(city, days, spending_money)
+
+
+your_trip()
